@@ -12,7 +12,7 @@ python-openpose determines whether user's neck is bended or not
 
 # Installation
 1. Download zip file
-2. Go to openpose_github(https://github.com/CMU-Perceptual-Computing-Lab/openpose) and download zip file.
+2. Go to [openpose-master](https://github.com/CMU-Perceptual-Computing-Lab/openpose) and download zip file.
 3. In that file, model installation command 
 for Mac
 ```
