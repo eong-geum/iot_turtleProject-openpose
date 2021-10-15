@@ -2,6 +2,8 @@
 python-openpose determines whether user's neck is bended or not
 사진을 분석하여 사용자의 목 각도를 측정하는 모듈
 
+사진에 보이는 사용자의 옆모습에서, <br>
+목 아래 부터 귀까지의 직선이 얼마나 기울어졌는지 측정하여 거북목을 판단한다.
 
 # reference
 - 사용자의 허리 각도를 구하는 소스 참고
@@ -26,7 +28,11 @@ for Windows
 4. When installation is done, copy files `models/pose/mpi/pose_iter_160000.caffemodel` and `models/pose/mpi/pose_deploy_linevec_faster_4_stages.prototxt`
 5. put those files in same directory that `main.py` exists.
 6. put one or more image files in the same directory, and correct image files' name in `main.py` code.
-7. start command:
+7. install opencv-python
+```
+pip install opencv-python
+```
+8. start command:
 ```
 python3 main.py
 ```
