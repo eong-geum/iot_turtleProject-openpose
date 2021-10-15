@@ -23,7 +23,7 @@ for Windows
 ```
 ./models/getModels.bat
 ```
-4. If installation is done, copy files `models/pose/mpi/pose_iter_160000.caffemodel` and `models/pose/mpi/pose_deploy_linevec_faster_4_stages.prototxt`
+4. When installation is done, copy files `models/pose/mpi/pose_iter_160000.caffemodel` and `models/pose/mpi/pose_deploy_linevec_faster_4_stages.prototxt`
 5. put those files in same directory that `main.py` exists.
 6. put one or more image files in the same directory, and correct image files' name in `main.py` code.
 7. start command:
