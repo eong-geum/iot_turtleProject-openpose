@@ -1,5 +1,5 @@
 # iot_turtleProject-openpose
-python-openpose determines whether user's neck is bended or not
+python-openpose determines whether user's neck is bended or not <br>
 사진을 분석하여 사용자의 목 각도를 측정하는 모듈
 
 사진에 보이는 사용자의 옆모습에서, <br>
