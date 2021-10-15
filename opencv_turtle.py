@@ -56,15 +56,17 @@ def output_keypoints(image_path, proto_file, weights_file, threshold, model_name
         y = int(y)
 
         if prob > threshold:  # [pointed]
-            cv2.circle(frame, (x, y), 5, (0, 255, 255), thickness=-1, lineType=cv2.FILLED)
-            cv2.putText(frame, str(i), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1, lineType=cv2.LINE_AA)
+            if (i == 0 or i == 1 or i == 17 or i == 18):
+                cv2.circle(frame, (x, y), 5, (0, 255, 255), thickness=-1, lineType=cv2.FILLED)
+                cv2.putText(frame, str(i), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1, lineType=cv2.LINE_AA)
 
             points.append((x, y))
             # print(f"[pointed] {BODY_PARTS[i]} ({i}) => prob: {prob:.5f} / x: {x} / y: {y}")
 
         else:  # [not pointed]
-            cv2.circle(frame, (x, y), 5, (0, 255, 255), thickness=-1, lineType=cv2.FILLED)
-            cv2.putText(frame, str(i), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1, lineType=cv2.LINE_AA)
+            if (i == 0 or i == 1 or i == 17 or i == 18):
+                cv2.circle(frame, (x, y), 5, (0, 255, 255), thickness=-1, lineType=cv2.FILLED)
+                cv2.putText(frame, str(i), (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 1, lineType=cv2.LINE_AA)
 
             points.append(None)
             # print(f"[not pointed] {BODY_PARTS[i]} ({i}) => prob: {prob:.5f} / x: {x} / y: {y}")
@@ -76,9 +78,6 @@ def output_keypoints_with_lines(POSE_PAIRS, frame):
     # 프레임 복사
     frame_line = frame.copy()
 
-    # Neck 과 MidHeap 의 좌표값이 존재한다면
-    # if (points[1] is not None) and (points[8] is not None):
-    # calculate_degree(point_1=points[1], point_2=points[8], frame=frame_line)
 
     # Neck 과 (LEar 또는 REar) 좌표값이 존재한다면 degree 측정
     if (points[1] is not None) and (points[18] is not None):
