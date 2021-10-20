@@ -8,10 +8,10 @@ if __name__ == "__main__":
     ]
 
     # 신경 네트워크의 구조를 지정하는 prototxt 파일 (다양한 계층이 배열되는 방법 등)
-    protoFile_body_25 = "./op/pose/body_25/pose_deploy.prototxt"
+    protoFile_body_25 = "./pose_deploy.prototxt"
 
     # 훈련된 모델의 weight 를 저장하는 caffemodel 파일
-    weightsFile_body_25 = "./op/pose/body_25/pose_iter_584000.caffemodel"
+    weightsFile_body_25 = "./pose_iter_584000.caffemodel"
 
     # 이미지 경로 (출처: https://news.nate.com/view/20190906n05074?mid=n0400)
     path_list = []
