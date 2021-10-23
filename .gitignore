@@ -1,0 +1,5 @@
+__pycache__
+.idea
+op
+pose_deploy.prototxt
+pose_iter_584000.caffemodel
